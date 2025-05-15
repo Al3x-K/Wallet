@@ -22,29 +22,11 @@
             <div class="transaction-list">
                 <div class="income-area">
                     <h3>Income:</h3>
-                    <div class="transaction" id="0">
-                        <p class="transaction-name"><i class="fas fa-money-bill-wave"></i> Salary</p>
-                        <p class="transaction-amount">2000Eur
-                            <button class="delete"><i class="fas fa-times"></i></button></p>
-                    </div>
+                    
                 </div>
                 <div class="expenses-area">
                     <h3>Expenses:</h3>
-                    <div class="transaction" id="1">
-                        <p class="transaction-name"><i class="fas fa-shopping-cart"></i>Groceries</p>
-                        <p class="transaction-amount">-150Eur
-                            <button class="delete"><i class="fas fa-times"></i></button></p>
-                    </div>
-                    <div class="transaction" id="1">
-                        <p class="transaction-name"><i class="fas fa-hamburger"></i>Food</p>
-                        <p class="transaction-amount">-40Eur
-                            <button class="delete"><i class="fas fa-times"></i></button></p>
-                    </div>
-                    <div class="transaction" id="1">
-                        <p class="transaction-name"><i class="fas fa-film"></i>Entertainment</p>
-                        <p class="transaction-amount">-20Eur
-                            <button class="delete"><i class="fas fa-times"></i></button></p>
-                    </div>
+                    
             </div>
         </section>
         <section class="options">
@@ -78,12 +60,14 @@
 
         <label for="category">Choose category:</label>
         <small>( [ + ] - income, [-] - expense )</small>
-        <select id="category">
+        <select id="category" onchange="selectCategory()">
             <option value="none" selected disabled></option>
             <option value="income">[ + ] Income</option>
             <option value="shopping">[ - ] Shopping</option>
             <option value="food">[ - ] Food</option>
             <option value="entertainment">[ - ] Entertainment</option>
+            <option value="transport">[ - ] Transport</option>
+            <option value="other">Other</option>
         </select>
 
         <div class="panel-buttons">
