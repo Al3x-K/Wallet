@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat:200,400,700&display=swap&subset=latin-ext"rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/be1032a037.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-wallet"></i>Wallet</h1>
+        <p>Your personal finance manager.</p>
+    </header>
+
+    <main>
+        <section class="transactions">
+            <h2 class="title">List of transactions</h2>
+            <div class="transaction-list">
+                <div class="income-area">
+                    <h3>Income:</h3>
+                    <div class="transaction" id="0">
+                        <p class="transaction-name"><i class="fas fa-money-bill-wave"></i> Salary</p>
+                        <p class="transaction-amount">2000Eur
+                            <button class="delete"><i class="fas fa-times"></i></button></p>
+                    </div>
+                </div>
+                <div class="expenses-area">
+                    <h3>Expenses:</h3>
+                    <div class="transaction" id="1">
+                        <p class="transaction-name"><i class="fas fa-shopping-cart"></i> Groceries</p>
+                        <p class="transaction-amount">-150Eur
+                            <button class="delete"><i class="fas fa-times"></i></button></p>
+                    </div>
+                    <div class="transaction" id="1">
+                        <p class="transaction-name"><i class="fas fa-hamburger"></i> Food</p>
+                        <p class="transaction-amount">-40Eur
+                            <button class="delete"><i class="fas fa-times"></i></button></p>
+                    </div>
+                    <div class="transaction" id="1">
+                        <p class="transaction-name"><i class="fas fa-film"></i> Entertainment</p>
+                        <p class="transaction-amount">-20Eur
+                            <button class="delete"><i class="fas fa-times"></i></button></p>
+                    </div>
+            </div>
+        </section>
+        <section class="options">
+            <div>
+                <h2 class="title">Available Funds</h2> 
+                <p class="available-money">0 Eur</p>
+            </div>
+            <div class="controls">
+                <button class="add-transaction"><i class="fas fa-plus"></i> Add transaction</button>
+                <button class="delete-all"><i class="fas fa-trash"></i> Delete all</button>
+            </div>
+            <div class="style-selection">
+                <h2 class="title">Choose theme:</h2>
+                <div class="color-buttons">
+                    <button class="light"></button>
+                    <button class="dark"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="add-transaction-panel">
+        <h2 class="title">Add new transaction</h2>
+        <label for="name">Name:</label>
+        <small>(Enter transaction name)</small>
+        <input type="text" id="name">
+
+        <label for="amount">Amount:</label>
+        <small>(Enter the amount, if you are adding an expense, put a minus sign in front of the amount)</small>
+        <input type="number" id="amount">
+
+        <label for="category">Choose category:</label>
+        <small>( [ + ] - income, [-] - expense )</small>
+        <select id="category">
+            <option value="none" selected disabled></option>
+            <option value="income">[ + ] Income</option>
+            <option value="shopping">[ - ] Shopping</option>
+            <option value="food">[ - ] Food</option>
+            <option value="entertainment">[ - ] Entertainment</option>
+        </select>
+
+        <div class="panel-buttons">
+            <button class="save">
+                <i class="fas fa-save"></i> Save
+            </button>
+            <button class="cancel">
+                <i class="fas fa-window-close"></i> Cancel
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
