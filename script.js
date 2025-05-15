@@ -126,8 +126,8 @@ const deleteTransaction = transactionId =>
 
 const deleteAllTransactions = () =>
 {
-    incomeSection.innerHTML = '<h3>Income</h3>';
-    expenseSection.innerHTML = '<h3>Expenses</h3>';
+    incomeSection.innerHTML = '<h3>Income:</h3>';
+    expenseSection.innerHTML = '<h3>Expenses:</h3>';
     availableMoeny.textContent = '0 EUR';
     moneyArray = [0]; 
 }
